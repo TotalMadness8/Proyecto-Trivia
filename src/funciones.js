@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'React';
 import { axios } from 'axios';
+import { API_BASE, API_CATEGORIAS } from './config';
 
 
 //Constantes para la API de trivia
@@ -15,7 +16,7 @@ export function getTrivia() {
 export async function getTriviaData() {
     setloading(true);
     try {
-        const response = await axios.get('https://opentdb.com/api_config.php');
+        const response = await axios.get('API_BASE');
         if (!response.ok) throw new Error('Error al obtener los datos de la API de trivia');
 
         setPreguntaTrivia(response.data.results);
