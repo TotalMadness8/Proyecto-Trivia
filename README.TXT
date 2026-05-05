@@ -1,1 +1,0 @@
-Vamos aprendiendo a rezar
