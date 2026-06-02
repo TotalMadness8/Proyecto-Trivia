@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { API_BASE, API_CATEGORIAS, API_CANTIDAD } from './config';
+import { API_BASE, API_CATEGORIAS, API_CANTIDAD, API_TIPO } from './config';
 
 export const triviaService = {
   // Busca las categorias disponibles
@@ -17,7 +17,7 @@ export const triviaService = {
   getQuestions: async (category, difficulty) => {
     try {
       // Variables centralizadas de configuración
-      const url = `${API_BASE}?amount=${API_CANTIDAD}&category=${category}&difficulty=${difficulty}&type=multiple`;
+      const url = `${API_BASE}?amount=${API_CANTIDAD}&category=${category}&difficulty=${difficulty}&type=${API_TIPO}`;
       const response = await axios.get(url);
       
       if (response.data.response_code === 0) {
