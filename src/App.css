@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.accent-text {
+  color: #d6cfa6;
+}
+
 .App-header {
   background: radial-gradient(circle at center, #323844 0%, #1e2229 100%);
   min-height: 100vh;
@@ -71,7 +75,7 @@
 
 /* Contenedor para las botones con respuestas */
 .quiz-container {
-  min-height: 500px; /* Adjust this value based on your content */
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
